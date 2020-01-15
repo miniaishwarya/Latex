@@ -1,0 +1,217 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{pslatex}
+\usepackage{lmodern}
+\usepackage{helvet}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{sectsty}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{fixltx2e}
+\usepackage{acronym}
+\usepackage[titles]{tocloft}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{cases}
+\usepackage{cite}
+\usepackage[export]{adjustbox}
+\usepackage{url}
+\usepackage{rotating} 
+
+\usepackage{setspace}
+\usepackage{booktabs}
+
+\usepackage{float}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+
+\chapterfont{\large\centering}
+\sectionfont{\normalsize}
+\subsectionfont{\normalsize}
+\linespread{1.5}
+\geometry{a4paper,left=3cm,right=2cm,top=2cm,bottom=2cm}
+\setcounter{tocdepth}{2}
+\usepackage{amsmath}
+\begin{document}
+\pagenumbering{roman}
+\setcounter{page}{1}
+\setcounter{tocdepth}{1}
+\renewcommand\contentsname{CONTENTS}
+\tableofcontents
+
+% EDIT THIS
+\newpage
+\vspace*{2.52cm} \hspace*{-0.88cm}
+\addcontentsline{toc}{chapter}{LIST OF ABBREVIATIONS}
+\hspace*{4.3cm}
+\textbf{{\large LIST OF ABBREVIATIONS}}\\
+\vspace*{0.5cm}
+\begin{acronym}[AWGN]
+	 \acro{NN}{Neural Network}
+     
+\end{acronym}
+
+\newpage
+\addcontentsline{toc}{chapter}{LIST OF FIGURES}
+\renewcommand\listfigurename{LIST OF FIGURES}
+\listoffigures
+
+%INTRODUCTION
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\renewcommand\chaptername{CHAPTER}
+\chapter{INTRODUCTION}
+A bus  is a road vehicle designed to carry a large number of passengers. The services offered by the buses has made it the most preferred mode of transportation for the citizens. The cheap ticket fares, the convenience, the safety and a capacity as high as 300 passengers  has made buses a desirable choice for travel by the citizens. In most countries, the different locations the bus will be travelling through, will be displayed on a board in the front of it. However, the locations will be written in the native language. This would pose a problem to the foreigners along with people who are unable to comprehend the language. 
+
+\paragraph{}
+The reason behind their wide usage is, the cheap ticket fares, the
+convenience as well as the safety being ensured for passengers. Being a
+local service, the buses display the destinations in their native language.
+Unfortunately, foreigners along with people who are unable to comprehend
+the native language find it difficult to use the local bus service.
+The project focuses on developing a software solution that will help end
+users to navigate across a city by integrating with the local bus service.
+Image of the bus board is captured via a phone camera. They are
+preprocessed using various image enhancement operations in order to
+obtain the image in the required format. Optical Character Recognition
+which is implemented by using Convolutional Neural Network, is used to
+understand the images captured, extract the relevant features and then
+map them to their respective character representations. The Malayalam
+characters obtained are then translated into the English language. Once the
+destinations are obtained, the user is provided with the bus stops through
+which that particular bus travels. Also the user is made aware of the users
+destination.
+
+\renewcommand\chaptername{CHAPTER}
+\chapter{ACKNOWLEDGEMENT}
+We express our sincere gratitude to all the faculty members of the Department of Computer Science and Engineering, SCT College of Engineering, Thiruvananthapuram for their relentless support and inspiration. We are ever-grateful to our families, friends and well-wishers for their immense goodwill and words of motivation.
+We would like to express a note of deep obligation to our guide, Sri. Rejimoan R. , Assistant Professor, Department of Computer Science and Engineering, Sree Chitra Thirunal College of Engineering, for her excellent guidance and valuable suggestions. It was indeed a privilege to work under him during the entire duration of this preliminary study. He has immensely helped us with him knowledge and stimulating suggestions to shape this study, reﬁne arguments and present it to the best of our abilities.
+We are indebted to Dr.Subu Surendran, Professor and Head of the Department of Computer Science and Engineering, Sree Chitra Thirunal College of Engineering, for inspiring us to strive for perfection. We are also thankful for the support and encouragement oﬀered by our staﬀ advisor Smt. Kuttymalu V.K., Assistant Professor, Department of Computer Science and Engineering, Sree Chitra Thirunal College of Engineering for the successful completion of this project preliminary.
+
+
+
+\newpage
+\renewcommand\chaptername{CHAPTER}
+\chapter{PROBLEM STATEMENT}
+Around 30\% of the population comprises of foreigners and people who are unable to comprehend the native language, thereby making it difficult for this group to understand the locations written on the bus boards. Our main aim is to provide a software solution that will:
+
+\begin{itemize}
+\item  help end users to navigate across a city by representing the destinations in the English language which is known to all
+\item  provide bus stop destinations to the end user
+\item  provide accurate location of the destination
+\end{itemize}
+
+
+\section{Motivation}
+Kerala is rated as the most popular tourist destination in India by international travellers who cite beaches, Ayurveda resorts and spas as the prime attractions. Statistics related to the arrival on tourists in Kerala is a good way to measure the growth of the sector over a certain period of time. Foreign tourist arrival to Kerala during 2017 crossed 10.91 lakhs which marked an increase of 5.15\% over the previous year. It is observed that there is a consistent growth in foreign tourist arrival in Kerala. Table 4.1 A given below indicates the arrival of foreign tourists to Kerala during the last five years and percentage of variation over the previous year. 
+
+\vspace*{1.5cm}
+\begin{figure}[!h]
+	\begin{center}
+		\includegraphics[width=15cm , height=5.5cm]{ker.png}    
+		\caption{Foreign tourist arrivals in 2013-2017} 
+		\label{fig1}
+	\end{center}
+\end{figure}
+\vspace*{1.5cm}
+
+\vspace*{1.5cm}
+\begin{figure}[!h]
+	\begin{center}
+		\includegraphics[width=15cm , height=5.5cm]{kera.png}    
+		\caption{Shows the graph of foreign tourists from 2013-2017} 
+		\label{fig1}
+	\end{center}
+\end{figure}
+\vspace*{1.5cm}
+
+
+\paragraph{}
+Hence the primary motivation for our project targets this group as end users. Foreign tourists as well as residents in Kerala who wish to commute via bus service require basic understanding of the Malayalam language. Also people who are unable to comprehend the language find it difficult to use this service. 
+
+\section{Objectives}
+The core objectives of this project are listed below:
+\item provide user friendly interface
+\item understanding of Malayalam scripts
+\item language translation to common English language
+\item time and cost efficient
+\item increase effectiveness and reliability of service
+\item ease of use
+
+\section{OCR Technology}
+OCR is a technology that recognizes text within a digital image. This approach is implemented in our project to detect Malayalam characters from the digital images of the bus boards. The images of the bus boards are converted to digital greyscale images. A standard deep learning approach of OCR is used for this purpose. A CNN model is trained with a dataset of Malayalam characters. On providing a test image of a Malayalam character, it detects the desired character. 
+
+\section{Application Scenario}
+The main application of our proposed solution is in the domain of transportation system. More specifically in the bus service scheme. 
+
+\section{Overview}
+The report mainly discusses the current state of the project. The Literature Review will discuss about the various Research Papers and the various concepts the team has evaluated to solve the problem. Each of the team member was given diﬀerent topics to review and the top three relevant paper has been reviewed discussing the valuable contribution from each. The Dataset chapter discusses the Dataset we are considering for this project and the various advantages over similar datasets. The Design chapter will discuss about the various use cases and requirements of the project and how that is solved by our design. The Action Plan discusses about the project management style adopted and how the timeline for the project has been designed. It also discusses in detail about the various principles followed by the project. The System Validation chapter talks about the summary of the meetings the team had with Tata Elxsi regarding validation of the project ideas to save time otherwise wasted on taking the wrong decisions. Their contribution was necessary for the project to reach this far. The report is concluded with all that is discussed and the further work that is to be taken in the Conclusion chapter. And the citations for the research papers are presented in the References chapter.
+
+\newpage
+\renewcommand\chaptername{CHAPTER}
+\chapter{LITERATURE REVIEW}
+ADD 
+
+\newpage
+\addcontentsline{toc}{chapter}{REFERENCES}
+\renewcommand\bibname{\textbf{REFERENCES}}
+\bibliographystyle{ieeetr}
+
+\begin{thebibliography}{2}
+\bibitem{S. Sabour} 
+S. Sabour, C. V Nov, and G. E. Hinton, “Dynamic Routing Between Capsules,”arXiv:1710.09829  Nips, 2017.
+
+\bibitem{Wei}
+Wei Zhao and Jianbo Ye and Min Yang and Zeyang       Lei and Suofei Zhang and Zhou Zhao, “Investigating Capsule Networks with Dynamic Routing for Text Classification”, CoRR, abs/1804.00538, 2018.
+
+\bibitem{Sri}
+Srivastava, Saurabh and Khurana, Prerna and Tewari, Vartika, "Identifying Aggression and Toxicity in Comments using Capsule Network", Proceedings of the First Workshop on Trolling, Aggression and Cyberbullying (TRAC-2018), pp. 98—105, 2018. 
+
+
+\bibitem{Y}
+Y. Wang, A. Sun, and J. Han, “Sentiment Analysis by Capsules ,” WWW '18 Proceedings of the 2018 World Wide Web Conference, Pages 1165-1174 vol. 2, 2018.
+
+\bibitem{Lai}
+S. Lai , L. Xu , K. Liu , J. Zhao , Recurrent convolutional neural networks for text classification, in: Proceedings of the AAAI Conference on Artificial Intelligence, 333, 2015, pp. 2267–2273.
+
+
+\bibitem{Alan}
+R. Alan, P. A. Jaques, and J. Francisco, “An analysis of hierarchical text classification using word emb e ddings,” Inf. Sci. (Ny)., vol. 471, pp. 216–232, 2019.
+
+\bibitem{Huang}
+C. Huang , X. Qiu , X. Huang , Text classification with document embeddings, in: Chinese Computational Linguistics and Natural Language Processing Based on Naturally Annotated Big Data,
+Springer, 2014, pp. 131-140 .
+
+\bibitem{B}
+B. Wang, W. Liu, Z. Lin, X. Hu, J. Wei, and C. Liu, "Text clustering algorithm based on deep representation learning," vol. 2018, no. Acait, pp. 1407-1414, 2018.
+
+\bibitem{Hinton}
+G. Hinton, S. Sabour, and N. Frosst, “MATRIX CAPSULES WITH EM ROUTING,” International Conference on Learning Representations (ICLR), pp. 1–15, 2018.
+
+\bibitem{Jaeyoung}
+Jaeyoung Kim, and Sion Jang and Sungchul Choi and              Eunjeong Park, “Text Classification using Capsules”, CoRR, abs/1808.03976, 2018. 
+
+\bibitem{Ivan}
+E. M. Ivan, "Scalable Video Analytics using Capsule Networks for Big Video Data", ScienceDirect, Procedia Comput. Sci., vol. 135, p. 3, 2018.
+
+\bibitem{Duarte}
+Duarte, K., Rawat, Y.S., and Shah, M. VideoCapsuleNet: A Simplified Network for Action Detection. CoRR, abs/1805.08162, 2018.
+
+%\bibitem{Wang}
+%Wang W. Liu, Z. Lin, X. Hu, J. Wei, and C. Liu, “Text clustering algorithm based on deep representation learning,” vol. 2018, no. Acait, pp. 1407–1414, 2018. 
+
+
+%\bibitem{Wei}
+%Wei Zhao and Jianbo Ye and Min Yang and Zeyang       Lei and Suofei Zhang and Zhou Zhao, “Investigating Capsule Networks with Dynamic Routing for Text Classification”, CoRR, abs/1804.00538, 2018.
+
+
+
+
+
+\end{thebibliography}
+
+
+\end{document}

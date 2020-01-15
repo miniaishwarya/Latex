@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+
+
+
+\begin{document}
+\begin{algorithm}
+\caption {Routing Algorithm}
+\textbf{procedure} ROUTING(\textbf{$u_{j|i}$},\textit{r},\textit{l})
+\;
+\For {all capsule i in layer l and capsule j in layer l+1:}
+	{ $ b_{i|j} \leftarrow 0$ \; }
+		\For{r iterations}
+		{ \For {all capsule i in layer l}
+			{ $c_i \leftarrow softmax(b_i)$
+			}
+		 \For {all capsule j in layer l+1}
+		 { $ s_{j} \leftarrow \Sigma_i c_{ij}\textbf{u}_{j|i}$
+		 }
+		 \For {all capsule j in layer l+1}
+		 { $ \textbf{v}_j \leftarrow squash(s_j)$ 
+		 }
+		 \For {all capsule in layer l and capsule j in layer (l+1)}
+		 { $b_{ij} \leftarrow b_{ij} + \textbf{u}_{j|i}.\textbf{v}_j $
+		 }
+		 return $\textbf{v}_j$
+		}
+\end{algorithm}
+\end{document}

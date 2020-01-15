@@ -1,0 +1,14 @@
+\contentsline {chapter}{LIST OF ABBREVIATIONS}{ii}
+\contentsline {chapter}{LIST OF FIGURES}{iii}
+\contentsline {chapter}{\numberline {1}INTRODUCTION}{1}
+\contentsline {paragraph}{}{1}
+\contentsline {chapter}{\numberline {2}ACKNOWLEDGEMENT}{2}
+\contentsline {chapter}{\numberline {3}PROBLEM STATEMENT}{3}
+\contentsline {section}{\numberline {3.1}Motivation}{3}
+\contentsline {paragraph}{}{4}
+\contentsline {section}{\numberline {3.2}Objectives}{4}
+\contentsline {section}{\numberline {3.3}OCR Technology}{5}
+\contentsline {section}{\numberline {3.4}Application Scenario}{5}
+\contentsline {section}{\numberline {3.5}Overview}{5}
+\contentsline {chapter}{\numberline {4}LITERATURE REVIEW}{7}
+\contentsline {chapter}{REFERENCES}{8}
